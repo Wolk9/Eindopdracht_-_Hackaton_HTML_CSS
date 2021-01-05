@@ -1,0 +1,195 @@
+/** Stylesheet for Eindopdracht - Hackaton_HTML_CSS **/
+
+/** Global Style **/
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  font-family: "Raleway", sans-serif;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 2px;
+  color: #4f8bc9;
+  padding-top: 10px;
+}
+
+.subtitel {
+  font-family: "Caveat", cursive;
+  font-size: 18px;
+  line-height: 8px;
+  color: grey;
+}
+
+.header {
+  background-color: white;
+  padding: 0px 10px 0px 10px;
+}
+
+.nav {
+  background-color: rgba(32, 112, 178, 1);
+}
+
+.main {
+  background-color: #ceffe7;
+  padding: 0px 10px 0px 10px;
+}
+
+.widget {
+  background-color: #69b7ff;
+  padding: 0px 10px 0px 10px;
+}
+
+.widget h3 {
+    color: white;
+}
+
+.footer {
+  background-color: #ffcc5c;
+  font-size: 8pt;
+  padding: 0px 10px 0px 10px;
+}
+
+.widget .caption {
+    font-size: 8pt;
+    color: white;
+}
+
+
+
+/** Navigation Styling **/
+
+.responsive-box-nav {
+  width: 100%;
+  height: 38px;
+  padding: 1% 0% 2% 2%;
+}
+
+nav .block {
+  width: 100%;
+  border: none;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+nav ul {
+  display: block;
+  list-style-type: circle;
+  /* margin-block-start: ;
+  margin-block-end: 1em;
+  margin-inline-start: 0px; */
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  padding: 3px 0px 0px 0px;
+  margin: 0px 0px;
+}
+
+nav li {
+  display: inline;
+  padding: 5px 10px;
+  color: white;
+  /* background-color: rgba(32, 112, 178, 0.596);
+  border: 0px;
+  border-radius: 2px; */
+}
+
+li a:link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+li a:visited {
+  color: white;
+}
+
+li a:hover {
+  color: lightskyblue;
+  font-weight: 700;
+}
+
+li a:activ {
+  color: grey;
+  font-weight: 700;
+}
+
+/** Grid Style **/
+
+/** Grid Style Mobile **/
+
+@media only screen {
+  .container {
+    min-height: 800px;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-rows: 100px 40px auto auto 40px;
+    grid-template-areas:
+      "h h h h h h h"
+      "n n n n n n n"
+      "m m m m m m m"
+      "w w w w w w w"
+      "f f f f f f f";
+  }
+  .header {
+    grid-area: h;
+  }
+
+  .main {
+    grid-area: m;
+  }
+
+  .nav {
+    grid-area: n;
+  }
+
+  .widget {
+    grid-area: w;
+  }
+
+  .footer {
+    grid-area: f;
+  }
+}
+
+@media only all and (min-width: 990px) {
+  .container {
+    height: 600px;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: auto repeat(11, 1fr);
+    grid-template-rows: 100px 40px auto 40px;
+    grid-template-areas:
+      "h h h h h h h h h h h h"
+      "n n n n n n n n n n n n"
+      "m m m m m m m m w w w w"
+      "f f f f f f f f f f f f";
+  }
+
+  .header {
+    grid-area: h;
+  }
+
+  .main {
+    grid-area: m;
+  }
+
+  .nav {
+    grid-area: n;
+  }
+
+  .widget {
+    grid-area: w;
+  }
+
+  .footer {
+    grid-area: f;
+  }
+}
