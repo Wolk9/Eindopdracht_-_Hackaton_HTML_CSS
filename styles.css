@@ -9,12 +9,15 @@ h3,
 h4,
 h5,
 h6,
-li {
+li,
+label,
+.my-form input,
+.form-group,
+.title {
   font-family: "Raleway", sans-serif;
 }
 
 .title {
-  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 24px;
   line-height: 2px;
@@ -36,6 +39,8 @@ li {
 
 .nav {
   background-color: rgba(32, 112, 178, 1);
+  font-size: 32px;
+  font-weight: 800;
 }
 
 .main {
@@ -49,21 +54,18 @@ li {
 }
 
 .widget h3 {
-    color: white;
+  color: white;
 }
 
 .footer {
-  background-color: #ffcc5c;
   font-size: 8pt;
   padding: 0px 10px 0px 10px;
 }
 
 .widget .caption {
-    font-size: 8pt;
-    color: white;
+  font-size: 8pt;
+  color: white;
 }
-
-
 
 /** Navigation Styling **/
 
@@ -81,11 +83,8 @@ nav .block {
 }
 
 nav ul {
-  display: block;
+  display: list-item;
   list-style-type: circle;
-  /* margin-block-start: ;
-  margin-block-end: 1em;
-  margin-inline-start: 0px; */
   margin-inline-end: 0px;
   padding-inline-start: 0px;
   padding: 3px 0px 0px 0px;
@@ -93,18 +92,15 @@ nav ul {
 }
 
 nav li {
-  display: inline;
+  display: inline-flex;
   padding: 5px 10px;
   color: white;
-  /* background-color: rgba(32, 112, 178, 0.596);
-  border: 0px;
-  border-radius: 2px; */
 }
 
 li a:link {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 li a:visited {
@@ -116,56 +112,145 @@ li a:hover {
   font-weight: 700;
 }
 
-li a:activ {
+li a:active {
   color: grey;
   font-weight: 700;
 }
 
-/** Grid Style **/
-
 /** Grid Style Mobile **/
 
-@media only screen {
-  .container {
-    min-height: 800px;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-rows: 100px 40px auto auto 40px;
-    grid-template-areas:
-      "h h h h h h h"
-      "n n n n n n n"
-      "m m m m m m m"
-      "w w w w w w w"
-      "f f f f f f f";
-  }
-  .header {
-    grid-area: h;
-  }
-
-  .main {
-    grid-area: m;
-  }
-
-  .nav {
-    grid-area: n;
-  }
-
-  .widget {
-    grid-area: w;
-  }
-
-  .footer {
-    grid-area: f;
-  }
+.container {
+  min-height: 800px;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: 150px max-content max-content max-content max-content;
+  grid-template-areas:
+    "h h h h h h h"
+    "n n n n n n n"
+    "m m m m m m m"
+    "w w w w w w w"
+    "f f f f f f f";
+}
+.header {
+  grid-area: h;
 }
 
-@media only all and (min-width: 990px) {
+.main {
+  grid-area: m;
+}
+
+.nav {
+  grid-area: n;
+}
+
+.widget {
+  grid-area: w;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #ffcc5c;
+  font-size: 16px;
+}
+
+.main p,
+.widget p {
+  font-size: 36px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.subtitel {
+  font-size: 32px;
+  padding-left: 100px;
+}
+
+.main h2,
+.widget h2 {
+  font-size: 48px;
+}
+
+.main h3,
+.widget h3 {
+  font-size: 42px;
+}
+
+.logo {
+  max-width: 10%;
+  float: left;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 1%;
+}
+
+.movie {
+  width: auto;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+}
+
+/** Form Styling Mobile **/
+
+.my-form {
+  box-align: center;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  font-size: 28px;
+}
+
+.my-form .form-group {
+  padding-bottom: 15px;
+   
+}
+
+.my-form label {
+  display: block;
+}
+
+.my-form input[type="text"],
+.my-form input[type="url"],
+.my-form textarea {
+  padding: 8px;
+  width: 100%;
+  font-size: 28px;
+}
+
+.my-form input[type="checkbox"] {
+  width: 10%;
+  font-size: 28px;
+}
+
+.my-form input[type="radio"] {
+  width: 10%;
+  font-size: 28px;
+}
+
+.my-form input[name="tel"],
+.my-form input[name="age"],
+.my-form input[name="date"] {
+  height: auto;
+  width: 80%;
+  padding: 0px 20px 0px 20px;
+  font-size: 28px;
+}
+
+/** Styling Desktop **/
+
+@media only screen and (min-width: 990px) {
   .container {
     height: 600px;
     display: grid;
     grid-gap: 3px;
     grid-template-columns: auto repeat(11, 1fr);
-    grid-template-rows: 100px 40px auto 40px;
+    grid-template-rows: 100px max-content max-content max-content;
     grid-template-areas:
       "h h h h h h h h h h h h"
       "n n n n n n n n n n n n"
@@ -173,6 +258,45 @@ li a:activ {
       "f f f f f f f f f f f f";
   }
 
+  /** Navigation Styling Destkop **/
+
+  .responsive-box-nav {
+    width: 100%;
+    height: 38px;
+    padding: 1% 0% 2% 2%;
+  }
+
+  nav .block {
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  nav ul {
+    display: block;
+    list-style-type: circle;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    padding: 3px 0px 0px 0px;
+    margin: 0px 0px;
+  }
+
+  nav li {
+    display: inline;
+    padding: 5px 10px;
+    color: white;
+  }
+
+  li a:link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+/** Global Styling Destkop **/
+
+
   .header {
     grid-area: h;
   }
@@ -191,5 +315,85 @@ li a:activ {
 
   .footer {
     grid-area: f;
+    background-color: #ffcc5c;
   }
+
+  .main p,
+  .widget p {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitel {
+    font-size: 18px;
+    padding-left: 100px;
+  }
+
+  .main h2,
+  .widget h2,
+  nav li {
+    font-size: 24px;
+  }
+
+  .main h3,
+  .widget h3 {
+    font-size: 21px;
+  }
+  .logo {
+    max-width: 6%;
+    float: left;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    margin-right: 15px;
+    margin-bottom: 1%;
+  }
+
+
+  /** Form Styling Desktop **/
+
+.my-form {
+  box-align: center;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+}
+
+.my-form .form-group {
+  padding-bottom: 15px;
+ font-size: 18px;
+}
+
+.my-form label {
+  display: block;
+}
+
+.my-form input[type="text"],
+.my-form input[type="url"],
+.my-form textarea {
+  padding: 8px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.my-form input[type="checkbox"] {
+  width: 10%;
+}
+
+.my-form input[type="radio"] {
+  width: 10%;
+}
+
+.my-form input[name="tel"],
+.my-form input[name="age"],
+.my-form input[name="date"] {
+  height: 25px;
+  width: 80%;
+  padding: 0px 20px 0px 20px;
+  font-size: 18px;
+}
 }
