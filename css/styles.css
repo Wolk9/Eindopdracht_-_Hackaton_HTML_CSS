@@ -39,7 +39,6 @@ label,
 
 .nav {
   background-color: rgba(32, 112, 178, 1);
-  font-size: 32px;
   font-weight: 800;
 }
 
@@ -68,54 +67,6 @@ label,
 }
 
 /** Navigation Styling **/
-
-.responsive-box-nav {
-  width: 100%;
-  height: 38px;
-  padding: 1% 0% 2% 2%;
-}
-
-nav .block {
-  width: 100%;
-  border: none;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-}
-
-nav ul {
-  display: list-item;
-  list-style-type: circle;
-  margin-inline-end: 0px;
-  padding-inline-start: 0px;
-  padding: 3px 0px 0px 0px;
-  margin: 0px 0px;
-}
-
-nav li {
-  display: inline-flex;
-  padding: 5px 10px;
-  color: white;
-}
-
-li a:link {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-li a:visited {
-  color: white;
-}
-
-li a:hover {
-  color: lightskyblue;
-  font-weight: 700;
-}
-
-li a:active {
-  color: grey;
-  font-weight: 700;
-}
 
 /** Grid Style Mobile **/
 
@@ -196,52 +147,6 @@ li a:active {
   padding: 0%;
 }
 
-/** Form Styling Mobile **/
-
-.my-form {
-  box-align: center;
-  width: 80%;
-  padding: 20px;
-  margin: auto;
-  font-size: 28px;
-}
-
-.my-form .form-group {
-  padding-bottom: 15px;
-   
-}
-
-.my-form label {
-  display: block;
-}
-
-.my-form input[type="text"],
-.my-form input[type="url"],
-.my-form textarea {
-  padding: 8px;
-  width: 100%;
-  font-size: 28px;
-}
-
-.my-form input[type="checkbox"] {
-  width: 10%;
-  font-size: 28px;
-}
-
-.my-form input[type="radio"] {
-  width: 10%;
-  font-size: 28px;
-}
-
-.my-form input[name="tel"],
-.my-form input[name="age"],
-.my-form input[name="date"] {
-  height: auto;
-  width: 80%;
-  padding: 0px 20px 0px 20px;
-  font-size: 28px;
-}
-
 /** Styling Desktop **/
 
 @media only screen and (min-width: 990px) {
@@ -250,7 +155,7 @@ li a:active {
     display: grid;
     grid-gap: 3px;
     grid-template-columns: auto repeat(11, 1fr);
-    grid-template-rows: 100px max-content max-content max-content;
+    grid-template-rows: 100px auto max-content max-content;
     grid-template-areas:
       "h h h h h h h h h h h h"
       "n n n n n n n n n n n n"
@@ -260,42 +165,17 @@ li a:active {
 
   /** Navigation Styling Destkop **/
 
-  .responsive-box-nav {
-    width: 100%;
-    height: 38px;
-    padding: 1% 0% 2% 2%;
+  .nav-container {
+    display: flex;
+    justify-content: left;
   }
 
-  nav .block {
-    width: 100%;
-    border: none;
-    margin: 0px;
-    padding: 0px 0px 0px 0px;
+  .nav-container > li {
+    flex: 1 0 auto;
+    background-color: whitesmoke;
   }
 
-  nav ul {
-    display: block;
-    list-style-type: circle;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
-    padding: 3px 0px 0px 0px;
-    margin: 0px 0px;
-  }
-
-  nav li {
-    display: inline;
-    padding: 5px 10px;
-    color: white;
-  }
-
-  li a:link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-/** Global Styling Destkop **/
-
+  /** Global Styling Destkop **/
 
   .header {
     grid-area: h;
@@ -352,48 +232,4 @@ li a:active {
     margin-right: 15px;
     margin-bottom: 1%;
   }
-
-
-  /** Form Styling Desktop **/
-
-.my-form {
-  box-align: center;
-  width: 80%;
-  padding: 20px;
-  margin: auto;
-}
-
-.my-form .form-group {
-  padding-bottom: 15px;
- font-size: 18px;
-}
-
-.my-form label {
-  display: block;
-}
-
-.my-form input[type="text"],
-.my-form input[type="url"],
-.my-form textarea {
-  padding: 8px;
-  width: 100%;
-  font-size: 18px;
-}
-
-.my-form input[type="checkbox"] {
-  width: 10%;
-}
-
-.my-form input[type="radio"] {
-  width: 10%;
-}
-
-.my-form input[name="tel"],
-.my-form input[name="age"],
-.my-form input[name="date"] {
-  height: 25px;
-  width: 80%;
-  padding: 0px 20px 0px 20px;
-  font-size: 18px;
-}
 }
