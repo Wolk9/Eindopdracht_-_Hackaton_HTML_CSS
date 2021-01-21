@@ -1,4 +1,5 @@
 /** Stylesheet for Eindopdracht - Hackaton_HTML_CSS **/
 @import url("global.css") screen;
 @import url("mobile.css") screen;
-@import url("desktop.css") screen and (min-width: 990px);
+@import url("tablet.css") screen and (min-width: 600px);
+@import url("desktop.css") screen and (min-width: 768px);

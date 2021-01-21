@@ -1,6 +1,8 @@
 /* Stylesheet eindopdracht - Hackaton_HTML_CSS */
-/* Mobile First zonder voorwaarden */
-/* als 2e aangeroepen vanuit sytles.css  */
+/* Tablet sytles met voorwaarden */
+/* als 3e aangeroepen vanuit sytles.css  */
+
+/** Styling Tablet **/
 
 /** Grid Style Mobile **/
 
@@ -8,7 +10,7 @@
   min-height: 800px;
   display: grid;
   grid-gap: 3px;
-  grid-template-rows: 150px max-content max-content max-content max-content;
+  grid-template-rows: auto max-content max-content max-content max-content;
   grid-template-areas:
     "h h h h h h h"
     "n n n n n n n"
@@ -24,7 +26,7 @@
 
 .main {
   grid-area: m;
-  background-color: #f4ffce;
+  background-color: #ffcef1;
   padding: 0px 10px 0px 10px;
 }
 
@@ -48,18 +50,15 @@
   padding: 0px 10px 0px 10px;
 }
 
-/** Styling Mobile **/
+/** Styling Tablet **/
 
 .logo {
   height: 100px;
   float: left;
-  /* padding-top: 1%;
-  padding-right: 1%;
-  padding-bottom: 1%;
-  padding-left: 1%;
-  margin-top: -10px;
+  float: left;
+  margin-top: 0px;
   margin-right: 20px;
-  margin-bottom: 1%; */
+  margin-bottom: 20px;
 }
 
 .title {
@@ -67,15 +66,16 @@
   font-size: 5vmin;
   line-height: 2px;
   color: #4f8bc9;
-  padding-top: 4vmin;
-  margin-left: 24vmin;
+  padding-top: 20px;
+  margin-left: 8vmin;
 }
 
 .subtitel {
   font-family: "Caveat", cursive;
-  font-size: 6vmin;
+  font-size: 5vmin;
   line-height: 4vmin;
-  margin-left: 24vmin;
+  margin-left: 8vmin;
+
   color: grey;
 }
 
@@ -111,7 +111,7 @@ nav li {
   padding: 0%;
 }
 
-/** Navigation Styling Mobile **/
+/** Navigation Styling Tablet **/
 
 .nav-container {
   display: flex;
