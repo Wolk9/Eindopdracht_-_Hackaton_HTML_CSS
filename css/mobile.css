@@ -1,0 +1,172 @@
+.title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 2px;
+  color: #4f8bc9;
+  padding-top: 10px;
+}
+
+.subtitel {
+  font-family: "Caveat", cursive;
+  font-size: 18px;
+  line-height: 8px;
+  color: grey;
+}
+
+.header {
+  background-color: white;
+  padding: 0px 10px 0px 10px;
+}
+
+.nav {
+  background-color: #4f8bc9;
+  font-weight: 800;
+}
+
+.main {
+  background-color: #ceffe7;
+  padding: 0px 10px 0px 10px;
+}
+
+.widget {
+  background-color: #69b7ff;
+  padding: 0px 10px 0px 10px;
+}
+
+.widget h3 {
+  color: white;
+}
+
+.footer {
+  font-size: 8pt;
+  padding: 0px 10px 0px 10px;
+}
+
+.widget .caption {
+  font-size: 8pt;
+  color: white;
+}
+
+/** Navigation Styling **/
+
+.nav-container {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.nav-container > li {
+  list-style-type: none;
+  background-color: rgb(137, 183, 220);
+  border-radius: 5px;
+  padding: 5px 50px;
+  margin: 5px auto 5px auto;
+}
+
+.nav-container li > .active-page {
+  color: whitesmoke;
+}
+
+.nav-container > .active-page {
+  background-color: teal;
+}
+
+.nav-container li a {
+  text-decoration: none;
+  color: rgba(32, 112, 178, 1);
+}
+
+.nav-container li a:hover {
+  color: whitesmoke;
+}
+
+.nav-container > li:hover {
+  background-color: rgba(32, 112, 178, 1);
+}
+
+.nav-container > li:active {
+  background-color: rgba(32, 112, 178, 1);
+}
+
+/** Grid Style Mobile **/
+
+.container {
+  min-height: 800px;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: 150px max-content max-content max-content max-content;
+  grid-template-areas:
+    "h h h h h h h"
+    "n n n n n n n"
+    "m m m m m m m"
+    "w w w w w w w"
+    "f f f f f f f";
+}
+.header {
+  grid-area: h;
+}
+
+.main {
+  grid-area: m;
+}
+
+.nav {
+  grid-area: n;
+}
+
+.widget {
+  grid-area: w;
+  padding: 0% 5% 5% 5%;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #ffcc5c;
+  font-size: 16px;
+}
+
+.main p,
+.widget p {
+  font-size: 36px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.subtitel {
+  font-size: 32px;
+  padding-left: 100px;
+}
+
+.main h2,
+.widget h2 {
+  font-size: 48px;
+}
+
+.main h3,
+.widget h3,
+nav li {
+  font-size: 42px;
+}
+
+.logo {
+  max-width: 10%;
+  float: left;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  margin-top: -15px;
+  margin-right: 20px;
+  margin-bottom: 1%;
+}
+
+.movie {
+  width: auto;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+}

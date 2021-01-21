@@ -1,0 +1,110 @@
+/** Styling Desktop **/
+
+.container {
+  height: 600px;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: auto repeat(11, 1fr);
+  grid-template-rows: 100px max-content max-content max-content;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "n n n n n n n n n n n n"
+    "m m m m m m m m w w w w"
+    "f f f f f f f f f f f f";
+}
+
+/** Navigation Styling Destkop **/
+
+.nav-container {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.nav-container > li {
+  list-style-type: none;
+  background-color: rgb(190, 212, 230);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0px 20px;
+}
+
+.nav-container > li:first-child {
+  margin-left: -10pt;
+}
+
+.nav-container li a {
+  text-decoration: none;
+  color: rgba(32, 112, 178, 1);
+}
+
+.nav-container li a:hover {
+  color: whitesmoke;
+}
+
+.nav-container > li:hover {
+  background-color: rgba(32, 112, 178, 1);
+}
+
+.nav-container > li:active {
+  background-color: rgba(32, 112, 178, 1);
+}
+
+/** Global Styling Destkop **/
+
+.header {
+  grid-area: h;
+}
+
+.main {
+  grid-area: m;
+}
+
+.nav {
+  grid-area: n;
+}
+
+.widget {
+  grid-area: w;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #ffcc5c;
+}
+
+.main p,
+.widget p {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.subtitel {
+  font-size: 18px;
+  padding-left: 100px;
+}
+
+.main h2,
+.widget h2,
+nav li {
+  font-size: 24px;
+}
+
+.main h3,
+.widget h3 {
+  font-size: 21px;
+}
+.logo {
+  max-width: 6%;
+  float: left;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  margin-right: 15px;
+  margin-bottom: 1%;
+}
