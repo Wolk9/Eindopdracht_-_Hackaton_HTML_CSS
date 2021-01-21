@@ -1,0 +1,27 @@
+
+/* Stylesheet eindopdracht - Hackaton_HTML_CSS */
+/* Global Styles zonder voorwaarden */
+/* als eerste aangeroepen vanuit sytles.css  */
+
+
+/** Styling Global **/
+
+
+* {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+label,
+.my-form input,
+.form-group,
+.title {
+  font-family: "Raleway", sans-serif;
+}

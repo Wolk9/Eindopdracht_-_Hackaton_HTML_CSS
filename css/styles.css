@@ -1,28 +1,4 @@
 /** Stylesheet for Eindopdracht - Hackaton_HTML_CSS **/
-/** Global Style **/
-
-* {
-  box-sizing: border-box;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-label,
-.my-form input,
-.form-group,
-.title {
-  font-family: "Raleway", sans-serif;
-}
-
-/* @import url("./css/mobile.css") screen;
-@import url("./css/desktop.css") screen and (min-width: 990px); */
-
-@import "./mobile.css";
-
-@import "./desktop.css";
+@import url("global.css") screen;
+@import url("mobile.css") screen;
+@import url("desktop.css") screen and (min-width: 990px);
